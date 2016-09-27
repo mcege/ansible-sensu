@@ -2,7 +2,7 @@
 ---
 
 #sensu_server_yum_pkg: sensu-0.23.2-1.x86_64
-sensu_client_yum_pkg: sensu-0.23.2-1.x86_64
+sensu_yum_pkg: sensu-0.23.2-1.x86_64
 
 #config.json params
 sensu_server_rabbitmq_host: 10.10.10.10
