@@ -1,7 +1,6 @@
 #Default params for sensu role
 ---
 
-#sensu_server_yum_pkg: sensu-0.23.2-1.x86_64
 sensu_yum_pkg: sensu-0.23.2-1.x86_64
 
 #config.json params
@@ -18,12 +17,10 @@ sensu_server_uchiwa_password: secret
 #client.json params
 sensu_client_host: centos-67
 sensu_client_ip: 10.0.2.15
-
-vars:
-  sensu_client_keepalive_handlers:
+sensu_client_keepalive_handlers:
     - 'fmdaemon' #fmdaemon handler -> forwards sensu alerts to desired rabbitmq queue
     - 'email' #email handler
-  sensu_client_subscriptions:
+sensu_client_subscriptions:
     - 'all'
     - 'ms' #devops server
     - 'monitor' #monitoring server
