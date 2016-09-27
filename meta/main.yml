@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: mcege
-  description: sensu-client
+  description: sensu
   license: BSD
   min_ansible_version: 1.4
   #
