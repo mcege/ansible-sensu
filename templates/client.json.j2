@@ -1,5 +1,3 @@
-##########client.json.j2##########
-
 {
   "client": {
     "name": "{{ sensu_client_host }}",
@@ -8,14 +6,9 @@
       "thresholds": {
         "warning": 21,
         "critical": 25
-      },
-      "handlers": [
-	      "fmdaemon",
-	      "email"
-	    ]
+      }
     },
-    "subscriptions": [
+    "subscriptions": 
       {{ group_names | to_nice_json }}
-    ]
   }
 }

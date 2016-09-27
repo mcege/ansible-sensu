@@ -2,7 +2,7 @@
 #asd
 
 -
-  hosts: servers
+  hosts: all
   become: yes
   become_method: sudo
 
