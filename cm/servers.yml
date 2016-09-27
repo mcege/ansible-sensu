@@ -1,0 +1,10 @@
+---
+#asd
+
+-
+  hosts: servers
+  become: yes
+  become_method: sudo
+
+  roles:
+    - ansible-sensu

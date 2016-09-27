@@ -1,0 +1,20 @@
+# Configure json files
+---
+
+- name: Create config.json
+  template:
+    src=config.json.j2
+    dest=/etc/sensu/config.json
+    owner=sensu
+    group=sensu
+    backup=yes
+    mode=0644
+
+- name: Create client.json
+  template:
+    src=client.json.j2
+    dest=/etc/sensu/conf.d/client.json
+    owner=sensu
+    group=sensu
+    backup=yes
+    mode=0644

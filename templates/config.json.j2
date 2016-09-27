@@ -1,0 +1,26 @@
+##########config.json.j2##########
+
+{
+  "rabbitmq": {
+    "host": "{{ sensu_server_rabbitmq_host }}",
+    "port": 5672,
+    "vhost": "/{{ sensu_server_rabbitmq_vhost }}",
+    "user": "{{ sensu_server_rabbitmq_user }}",
+    "password": "{{ sensu_server_rabbitmq_password }}"
+  },    
+  "redis": {
+    "host": "{{ sensu_server_redis_host }}",
+    "port": 6379
+  },
+  "api": {
+    "host": "{{ sensu_server_api_host }}",
+    "bind": "0.0.0.0",
+    "port": 4567
+  },
+  "dashboard": {
+    "host": "{{ sensu_server_uchiwa_host }}",
+    "port": 3000,
+    "user": "{{ sensu_server_uchiwa_username }}",
+    "password": "{{ sensu_server_uchiwa_password }}"
+  }
+}

@@ -1,0 +1,5 @@
+# Handlers for sensu-server role
+---
+
+- name: restart sensu-client
+  service: name=sensu-client state=restarted
