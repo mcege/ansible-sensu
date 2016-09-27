@@ -1,4 +1,5 @@
-# Handlers for sensu-server role
+# Handlers for sensu role
+# Dummy
 ---
 
 - name: restart sensu-client
