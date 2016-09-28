@@ -9,9 +9,12 @@
     group=sensu
     backup=yes
     mode=0644
+  notify: 
+    - restart sensu-api
+  when: sensu_server_boolean == true
   notify:
     - restart sensu-server
-      restart sensu-api
+  when: sensu_server_boolean == true 
 
 - name: Create client.json
   template:
