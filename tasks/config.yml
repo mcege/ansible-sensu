@@ -9,6 +9,9 @@
     group=sensu
     backup=yes
     mode=0644
+  notify:
+    - restart sensu-server
+      restart sensu-api
 
 - name: Create client.json
   template:
@@ -18,3 +21,5 @@
     group=sensu
     backup=yes
     mode=0644
+  notify:
+    - restart sensu-client

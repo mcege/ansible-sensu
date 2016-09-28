@@ -1,6 +1,14 @@
 # Handlers for sensu role
-# Dummy
+
 ---
 
 - name: restart sensu-client
   service: name=sensu-client state=restarted
+
+- name: restart sensu-server
+  service: name=sensu-server state restarted
+  when: sensu_server_boolean == true
+
+- name: Start sensu-api
+  service: name=sensu-api state=restarted
+  when: sensu_server_boolean == true

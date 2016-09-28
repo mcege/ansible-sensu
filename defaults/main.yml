@@ -4,30 +4,17 @@
 sensu_yum_pkg: sensu-0.23.2-1.x86_64
 
 # config.json params
-sensu_server_rabbitmq_host: 10.10.10.10
+sensu_server_rabbitmq_host: "{{ sky_ms_rabbit_host|default(localhost) }}"
+sensu_server_rabbitmq_port: 5672
 sensu_server_rabbitmq_vhost: sensu
 sensu_server_rabbitmq_user: sensu
 sensu_server_rabbitmq_password: sensu
-sensu_server_redis_host: 10.10.10.10
-sensu_server_api_host: 10.10.10.10
-sensu_server_uchiwa_host: 10.10.10.10
-sensu_server_uchiwa_username: admin
-sensu_server_uchiwa_password: secret
+sensu_server_redis_host: "{{ sky_ms_redis_host|default(localhost) }}"
+sensu_server_redis_port: 6379
+sensu_server_api_host: localhost #"{{ server_host }}"
 
 # client.json params
-sensu_client_host: centos-67
-sensu_client_ip: 10.0.2.15
-#sensu_client_keepalive_handlers:
-#    - 'fmdaemon' #fmdaemon handler -> forwards sensu alerts to desired rabbitmq queue
-#    - 'email' #email handler
-#sensu_client_subscriptions:
-#    - 'all'
-#    - 'ms' #devops server
-#    - 'monitor' #monitoring server
-#    - 'service' #redis&mq server
-#    - 'api' #middleware server
-#    - 'task' #task server
-#    - 'db' #database server
-#    - 'gui' #gui server
+sensu_client_host: localhost #"{{ client_host }}"
+sensu_client_ip: localhost #"{{ client_ip }}"
 
 sensu_server_boolean: false #true if ms
