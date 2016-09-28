@@ -10,8 +10,8 @@
 # Create mq queue
 - include: mq.yml
 
-# Start sensu-server, api, client
-- include: start.yml
-
 # Enable sensu-service to run as service
 - include: service.yml
+
+# Start sensu-server, api, client
+- include: start.yml

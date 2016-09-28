@@ -2,13 +2,13 @@
 
 ---
 
-- name: restart sensu-client
+- name: Restart sensu-client
   service: name=sensu-client state=restarted
 
-- name: restart sensu-server
+- name: Restart sensu-server
   service: name=sensu-server state=restarted
-  when: sensu_server_boolean == true
+  when: sensu_server_boolean == true 
 
-- name: restart sensu-api
+- name: Restart sensu-api
   service: name=sensu-api state=restarted
   when: sensu_server_boolean == true
