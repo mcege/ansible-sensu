@@ -1,0 +1,11 @@
+# Create mq queue
+---
+
+- name: Create mq queues
+  rabbitmq_queue: 
+    name: "{{ item }}"
+    login_host: "{{ sensu_server_rabbitmq_host }}"
+    login_user: "{{ sensu_server_rabbitmq_user }}"
+    login_password: "{{ sensu_server_rabbitmq_password }}"
+    vhost: "{{ sensu_server_rabbitmq_vhost }}"
+  when: sensu_server_boolean == true
