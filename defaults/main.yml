@@ -6,6 +6,7 @@ sensu_yum_pkg: sensu-0.23.2-1.x86_64
 # config.json params
 sensu_server_rabbitmq_host: localhost #"{{ sky_ms_rabbit_host|default(localhost) }}"
 sensu_server_rabbitmq_port: 5672
+sensu_server_rabbitmq_queue: sensu
 sensu_server_rabbitmq_vhost: sensu
 sensu_server_rabbitmq_user: sensu
 sensu_server_rabbitmq_password: sensu

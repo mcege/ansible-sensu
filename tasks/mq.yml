@@ -3,7 +3,7 @@
 
 - name: Create mq queues
   rabbitmq_queue: 
-    name: "{{ item }}"
+    name: "{{ sensu_server_rabbitmq_queue }}"
     login_host: "{{ sensu_server_rabbitmq_host }}"
     login_user: "{{ sensu_server_rabbitmq_user }}"
     login_password: "{{ sensu_server_rabbitmq_password }}"
