@@ -12,7 +12,6 @@
   notify: 
     - restart sensu-api
       restart sensu-server
-  when: sensu_server_boolean == true 
 
 - name: Create client.json
   template:
