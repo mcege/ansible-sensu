@@ -7,6 +7,8 @@
 
 - name: Restart sensu-server
   service: name=sensu-server state=restarted
+  when: sensu_server_boolean == true
 
 - name: Restart sensu-api
   service: name=sensu-api state=restarted
+  when: sensu_server_boolean == true

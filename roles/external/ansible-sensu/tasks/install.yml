@@ -1,5 +1,0 @@
-# Install sensu
----
-
-- name: Install sensu
-  yum: name={{ sensu_yum_pkg }} state=present

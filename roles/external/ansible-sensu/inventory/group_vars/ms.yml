@@ -1,4 +1,0 @@
-# ms server group_vars
----
-
-sensu_server_boolean: true # false if not ms server
