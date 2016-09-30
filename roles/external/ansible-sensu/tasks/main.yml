@@ -8,7 +8,7 @@
 - include: config.yml
 
 # Create mq queue
-- include: mq.yml
+#- include: mq.yml
 
 # Enable sensu-service to run as service
 - include: service.yml

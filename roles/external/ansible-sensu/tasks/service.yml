@@ -1,0 +1,11 @@
+# Service.yml
+---
+
+- name: Sensu-client restart
+  service: name=sensu-client enabled=yes
+
+- name: Sensu-server restart
+  service: name=sensu-server enabled=yes
+
+- name: Sensu-api restart
+  service: name=sensu-api enabled=yes

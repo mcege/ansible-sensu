@@ -1,0 +1,16 @@
+# Server, client, api start task
+---
+
+# Starts sensu-client
+- name: Start sensu-client
+  service: name=sensu-client state=started
+
+# Starts sensu-api ps: only at ms server
+- name: Start sensu-api
+  service: name=sensu-api state=started
+  when: sensu_server_boolean == true
+
+# Starts sensu-server ps: only at ms server
+- name: Start sensu-server
+  service: name=sensu-server state=started
+  when: sensu_server_boolean == true

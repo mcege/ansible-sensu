@@ -1,0 +1,14 @@
+{
+  "client": {
+    "name": "{{ sensu_client_host }}",
+    "address": "{{ sensu_client_ip }}",
+    "keepalive": {
+      "thresholds": {
+        "warning": 21,
+        "critical": 25
+      }
+    },
+    "subscriptions": 
+      {{ group_names | to_nice_json }}
+  }
+}

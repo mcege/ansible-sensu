@@ -1,0 +1,2 @@
+- src: git+https://github.com/mcege/ansible-sensu.git
+  name: ansible-sensu
