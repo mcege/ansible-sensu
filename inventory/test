@@ -1,2 +1,6 @@
 [mc]
 localhost ansible_ssh_user=vagrant ansible_ssh_pass=vagrant ansible_ssh_port=2222
+[ms]
+localhost ansible_ssh_user=vagrant ansible_ssh_pass=vagrant ansible_ssh_port=2222
+[mq]
+localhost ansible_ssh_user=vagrant ansible_ssh_pass=vagrant ansible_ssh_port=2222
